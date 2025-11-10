@@ -2,7 +2,7 @@
 # With thanks to David Bowes (d.h.bowes@lancaster.ac.uk) who did all the hard work
 # on this originally.
 
-FROM docker.io/ubuntu:24.04
+FROM ubuntu:24.04
 
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md
 LABEL \
@@ -25,7 +25,7 @@ ENV LANG=C.UTF-8
 # Copy apache virtual host file for later use
 COPY 000-jobe.conf /
 # Copy test script
-COPY container-test.sh /
+# COPY container-test.sh /
 
 # Mount secrets
 # Set timezone

@@ -1,0 +1,15 @@
+services:
+  jobeinabox:
+      build: .
+      container_name: jobe
+      environment:
+        - TZ=Europe/Moscow
+      ports:
+        - "4000:80"
+      networks:
+        - jobeinabox
+      restart: always
+
+networks:
+  jobeinabox:
+    driver: bridge
